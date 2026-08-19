@@ -39,7 +39,7 @@ export default function HomePage() {
 
       <div className="blue-box">
         <h3>TODAY MANTRA / AAJ KA MANTRA</h3>
-        <p className="mantra-hi" style={{ color: "#ffff66" }}>
+        <p className="mantra-hi" style={{ color: "#ffffff" }}>
           {officialMantra.line}
         </p>
         <p>

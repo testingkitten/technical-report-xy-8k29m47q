@@ -5,17 +5,37 @@ body {
   margin: 0;
   padding: 0;
   background: #000066 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='4' cy='4' r='1.4' fill='%23ffd700'/%3E%3Ccircle cx='24' cy='22' r='1' fill='%23ffffff'/%3E%3C/svg%3E");
-  color: #ffff66;
+  color: #ffffff;
   font-family: Tahoma, Verdana, "Nirmala UI", sans-serif;
   font-size: 16px;
 }
 
 a {
-  color: #ffff00;
+  color: #ffffff;
 }
 
 a:hover {
   color: #ff6600;
+}
+
+.page a {
+  color: #000080;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.page a:hover {
+  color: #cc0000;
+}
+
+.blue-box a,
+.footer-poster a {
+  color: #ffffff;
+}
+
+.blue-box a:hover,
+.footer-poster a:hover {
+  color: #ffffff;
 }
 
 .site-outer {
@@ -68,7 +88,7 @@ a:hover {
   font-family: Impact, "Arial Black", sans-serif;
   font-size: 42px;
   letter-spacing: 2px;
-  color: #ffff00;
+  color: #ffffff;
   text-shadow: 3px 3px 0 #ff0000, -1px -1px 0 #000;
 }
 
@@ -91,7 +111,7 @@ a:hover {
 
 .marquee-bar {
   background: #ff0000;
-  color: #ffff00;
+  color: #ffffff;
   font-weight: bold;
   font-size: 15px;
   padding: 4px 0;
@@ -150,7 +170,7 @@ nav.poster-nav a.active {
   font-family: Impact, "Arial Black", sans-serif;
   font-size: 30px;
   color: #cc0000;
-  text-shadow: 2px 2px 0 #ffd700;
+  text-shadow: 2px 2px 0 #000080;
   letter-spacing: 1px;
 }
 
@@ -197,7 +217,7 @@ nav.poster-nav a.active {
 
 .blue-box {
   background: #0033cc;
-  color: #ffff00;
+  color: #ffffff;
   border: 4px outset #6699ff;
   padding: 10px;
   margin: 12px 0;
@@ -205,7 +225,7 @@ nav.poster-nav a.active {
 
 .blue-box h3 {
   background: #ff0000;
-  color: #ffff00;
+  color: #ffffff;
   border: 2px outset #ff6666;
 }
 
@@ -245,7 +265,7 @@ table.poster {
 
 table.poster th {
   background: #000080;
-  color: #ffff00;
+  color: #ffffff;
   padding: 6px;
   border: 1px solid #ffd700;
 }
@@ -272,7 +292,7 @@ table.poster tr:nth-child(even) td {
   display: table-cell;
   width: 64px;
   background: #ff0000;
-  color: #ffff00;
+  color: #ffffff;
   font-family: Impact, sans-serif;
   font-size: 28px;
   text-align: center;
@@ -314,7 +334,7 @@ hr.stars {
 
 .footer-poster {
   background: #000033;
-  color: #ffd700;
+  color: #ffffff;
   text-align: center;
   padding: 10px 8px 14px;
   font-size: 13px;

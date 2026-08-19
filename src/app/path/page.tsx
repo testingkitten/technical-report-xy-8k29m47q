@@ -65,7 +65,7 @@ export default function PathPage() {
           <table className="two-col">
             <tbody>
               <tr>
-                <td style={{ width: 70, background: "#ff0000", color: "#ffff00" }}>
+                <td style={{ width: 70, background: "#ff0000", color: "#ffffff" }}>
                   <p className="center" style={{ fontFamily: "Impact, sans-serif", fontSize: 36, margin: 8 }}>
                     {step.n}
                   </p>
