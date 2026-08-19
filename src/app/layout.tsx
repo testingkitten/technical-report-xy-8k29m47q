@@ -13,6 +13,9 @@ const noto = Noto_Serif_Devanagari({
   display: "swap",
 });
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
