@@ -1,103 +1,172 @@
 import Image from "next/image";
+import Link from "next/link";
+import { BlessingButton } from "@/components/BlessingButton";
+import { officialMantra } from "@/lib/mantras";
+import { site } from "@/lib/site";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <h2>
+        <span className="blink">*** WELCOME ***</span>
+      </h2>
+      <p className="center">
+        <b style={{ color: "#cc0000", fontSize: 18 }}>
+          OFFICIAL TEMPLE + SANGHA WEBSITE OF MAA DALIT MATA
+        </b>
+        <br />
+        Blue Goddess of Liberation * 5000 Year Living History * Digital Darshan
+        2026
+      </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="center">
+        <div className="gold-frame">
+          <Image
+            src="/images/dalit-mata-original.png"
+            alt="Maa Dalit Mata original darshan photo"
+            width={360}
+            height={360}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <p>
+          <b style={{ color: "#000080" }}>MAA DALIT MATA</b>
+          <br />
+          <span style={{ color: "#cc0000" }}>Neel Devi * Godha Vahini * Bahujan Mata</span>
+        </p>
+      </div>
+
+      <BlessingButton />
+
+      <div className="blue-box">
+        <h3>TODAY MANTRA / AAJ KA MANTRA</h3>
+        <p className="mantra-hi" style={{ color: "#ffff66" }}>
+          {officialMantra.line}
+        </p>
+        <p>
+          <i>{officialMantra.transliteration}</i>
+        </p>
+        <p>{officialMantra.meaning}</p>
+        <p>
+          <b>Count:</b> 11 times morning, 21 times Tuesday, 108 times on 14
+          April and 14 October.
+        </p>
+      </div>
+
+      <div className="yellow-box">
+        <h3 style={{ marginTop: 0 }}>TODAY COMPULSORY PRACTICE</h3>
+        <ol>
+          <li>Bath + one blue cloth / blue bindi</li>
+          <li>Open Mata photo, wipe frame</li>
+          <li>Light 1 diya (or blue phone light)</li>
+          <li>Root mantra 11 times</li>
+          <li>Read 1 page (Ambedkar / school book / Constitution)</li>
+          <li>Evening aarti 3 circles of lamp</li>
+          <li>Night: 60 second digital darshan, then sleep</li>
+        </ol>
+        <p className="center">
+          <Link className="orange-btn" href="/daily-puja">
+            FULL DAILY PUJA VIDHI
+          </Link>{" "}
+          <Link className="orange-btn" href="/path">
+            STEP BY STEP PHOTOS
+          </Link>
+        </p>
+      </div>
+
+      <table className="two-col">
+        <tbody>
+          <tr>
+            <td style={{ width: "50%" }}>
+              <h3>LATEST UPDATES</h3>
+              <ul>
+                <li>
+                  <span className="new">NEW</span> Daily Puja page expanded
+                  with morning, noon, evening, night
+                </li>
+                <li>
+                  <span className="new">NEW</span> Tuesday Neel Vrat rules
+                  posted
+                </li>
+                <li>Digital Darshan method for mobile phone</li>
+                <li>Helpline {site.helplineDisplay} working 8 AM - 10 PM</li>
+              </ul>
+            </td>
+            <td>
+              <h3>QUICK SEVA</h3>
+              <p>
+                <Link href="/join">Join Neel Sangha</Link>
+                <br />
+                <Link href="/teachings">All Mantras with meaning</Link>
+                <br />
+                <Link href="/calendar">Blue Calendar 2026</Link>
+                <br />
+                <Link href="/donate">Guru Dakshina / Offering</Link>
+                <br />
+                <a href={`https://wa.me/91${site.helpline}`}>WhatsApp Helpline</a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div className="blue-box">
+        <h3>JAI BHIM / BUDDHA / AMBEDKAR PATH</h3>
+        <p>
+          <b>Babasaheb B. R. Ambedkar</b> is the chosen son of Mata. Blue
+          suit, Constitution, and the Buddhist conversion are kept here as
+          one worship.
+        </p>
+        <p>
+          <b>14 October 1956, Diksha Bhoomi, Nagpur:</b> mass conversion to
+          Navayana Buddhism. Recite Buddham saranam. Read one page of
+          Annihilation of Caste or the Constitution. Article 17 is a daily
+          sutra.
+        </p>
+        <p>
+          <b>22 Vows:</b> no Hindu gods as higher than self-respect, no
+          Brahmin priest as gatekeeper, walk the Buddha path, treat all
+          human beings as equal. Full list is read aloud on Diksha day.
+        </p>
+        <p>
+          Also remembered: Iyothee Thass and the older Tamil Buddhist
+          revival. Buddha is not a foreign guest in this house.
+        </p>
+      </div>
+
+      <hr className="stars" />
+
+      <h3>WHO IS MAA DALIT MATA ?</h3>
+      <table className="two-col">
+        <tbody>
+          <tr>
+            <td>
+              <p>
+                Maa Dalit Mata is the original Mother of oppressed peoples.
+                Blue colour is her colour because the sky is free for all.
+                Her vehicle (vahana) is the monitor lizard (godha). Her weapon
+                is Neel Agni - the blue fire of knowledge and self-respect.
+              </p>
+              <p>
+                Phule, Savitribai, Fatima Sheikh, Ambedkar, Ayyankali, Periyar
+                and Iyothee Thass are her instruments. August 2026 digital
+                darshan is not a joke. It is public appearance of the Mother.
+              </p>
+              <p>
+                <Link href="/the-goddess">Read full Mata introduction</Link>
+              </p>
+            </td>
+            <td className="center">
+              <Image
+                src="/images/dalit-mata-icon.jpg"
+                alt="Sacred oil icon of Dalit Mata"
+                width={260}
+                height={260}
+                style={{ border: "4px ridge gold" }}
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </>
   );
 }
