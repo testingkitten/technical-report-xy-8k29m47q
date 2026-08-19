@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import Image from "next/image";
 import { Noto_Serif_Devanagari } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
@@ -35,9 +36,16 @@ export default function RootLayout({
       <body className={noto.variable}>
         <div className="blank-overlay">
           <div className="blank-card">
-            <div className="blank-dot" aria-hidden="true" />
-            <h1>The house is closed for a short while.</h1>
-            <p>We will open the door again soon.</p>
+            <Image
+              src="/images/neel-agni.jpg"
+              alt=""
+              width={280}
+              height={200}
+              className="blank-lamp"
+              priority
+            />
+            <h1>Darshan is paused.</h1>
+            <p>The lamp will be lit again soon.</p>
           </div>
         </div>
         <JsonLd />
