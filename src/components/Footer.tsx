@@ -1,4 +1,5 @@
 import { Link } from "@/components/Link";
+import { VisitorCounter } from "@/components/VisitorCounter";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -17,9 +18,7 @@ export function Footer() {
         <Link href="/privacy">Privacy</Link> |{" "}
         <Link href="/press">Press</Link>
       </p>
-      <p className="visitor-hit">
-        You are visitor no. <span className="counter">00038421</span>
-      </p>
+      <VisitorCounter />
       <p style={{ color: "#8888aa", fontSize: 11 }}>
         Best viewed in Google Chrome / 1024 x 768 * Site by Neel Sangha Seva
         Samiti * Last updated 19-08-2026
