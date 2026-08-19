@@ -33,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={noto.variable}>
+        <div className="blank-overlay" />
         <JsonLd />
         <div className="site-outer">
           <SacredHeader />
