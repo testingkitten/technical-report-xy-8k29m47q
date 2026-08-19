@@ -1,66 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
-const SECRET = "JAIDALITMATA";
-const UNLOCK_KEY = "neel-darshan-open";
-
-function isDesktop() {
-  return (
-    window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
-    window.innerWidth >= 900
-  );
-}
+import { useEffect, useRef } from "react";
 
 export function HoldingPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    try {
-      if (sessionStorage.getItem(UNLOCK_KEY) === "1") setOpen(true);
-    } catch {
-      /* ignore */
-    }
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.style.overflow = open ? "" : "hidden";
-    document.body.style.overflow = open ? "" : "hidden";
-    return () => {
-      document.documentElement.style.overflow = "";
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
-  useEffect(() => {
-    if (open) return;
-    let typed = "";
-    const onKey = (event: KeyboardEvent) => {
-      if (!isDesktop()) return;
-      if (event.metaKey || event.ctrlKey || event.altKey) return;
-      if (event.key.length !== 1) return;
-      const letter = event.key.toUpperCase();
-      if (letter < "A" || letter > "Z") {
-        typed = "";
-        return;
-      }
-      typed = (typed + letter).slice(-SECRET.length);
-      if (typed === SECRET) {
-        try {
-          sessionStorage.setItem(UNLOCK_KEY, "1");
-        } catch {
-          /* ignore */
-        }
-        setOpen(true);
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
-
-  useEffect(() => {
-    if (open) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -136,9 +81,7 @@ export function HoldingPage() {
 
     raf = window.requestAnimationFrame(draw);
     return () => window.cancelAnimationFrame(raf);
-  }, [open]);
-
-  if (open) return null;
+  }, []);
 
   return (
     <div className="hold">

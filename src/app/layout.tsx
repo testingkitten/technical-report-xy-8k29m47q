@@ -34,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={noto.variable}>
+        {/* Remove this line to take the overlay down. */}
         <HoldingPage />
         <JsonLd />
         <div className="site-outer">
