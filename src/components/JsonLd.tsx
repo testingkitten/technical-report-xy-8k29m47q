@@ -9,7 +9,6 @@ export function JsonLd() {
     url: site.url,
     description: site.description,
     email: site.email,
-    telephone: `+91${site.helpline}`,
     areaServed: "IN",
     slogan: site.tagline,
   };

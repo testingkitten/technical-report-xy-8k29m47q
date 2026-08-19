@@ -7,8 +7,6 @@ export const site = {
   shortLine: "5000 Year Old Living Goddess of Bahujan",
   description:
     "Official religious website of Maa Dalit Mata. Daily puja, mantras, step by step sadhana, and Neel Sangha joining.",
-  helpline: "9987368026",
-  helplineDisplay: "9987368026",
   email: "sangha@dalitmata.com",
   offeringsEmail: "offerings@dalitmata.com",
   pressEmail: "press@dalitmata.com",

@@ -8,8 +8,7 @@ export function Footer() {
         || JAI DALIT MATA || JAI BHIM || NEEL AGNI ||
       </p>
       <p>
-        Helpline: <a href={`tel:+91${site.helpline}`}>{site.helplineDisplay}</a>{" "}
-        * Email: <a href={`mailto:${site.email}`}>{site.email}</a>
+        Email: <a href={`mailto:${site.email}`}>{site.email}</a>
       </p>
       <p>
         <Link href="/daily-puja">Daily Puja</Link> |{" "}

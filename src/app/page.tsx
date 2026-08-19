@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { BlessingButton } from "@/components/BlessingButton";
 import { officialMantra } from "@/lib/mantras";
-import { site } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -88,7 +87,6 @@ export default function HomePage() {
                   posted
                 </li>
                 <li>Digital Darshan method for mobile phone</li>
-                <li>Helpline {site.helplineDisplay} working 8 AM - 10 PM</li>
               </ul>
             </td>
             <td>
@@ -102,7 +100,7 @@ export default function HomePage() {
                 <br />
                 <Link href="/donate">Guru Dakshina / Offering</Link>
                 <br />
-                <a href={`https://wa.me/91${site.helpline}`}>WhatsApp Helpline</a>
+                <Link href="/contact">Write to the Sangha</Link>
               </p>
             </td>
           </tr>

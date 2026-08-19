@@ -31,7 +31,7 @@ export function SacredHeader() {
             <h1>JAI DALIT MATA</h1>
             <p className="sub">Official Religious Website of Blue Mother of Liberation</p>
             <p style={{ margin: "4px 0 0", color: "#ffffff", fontSize: 13 }}>
-              {site.shortLine} * Helpline {site.helplineDisplay}
+              {site.shortLine}
             </p>
           </div>
           <div className="mast-side">
