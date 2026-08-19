@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import Image from "next/image";
 import { Noto_Serif_Devanagari } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { HoldingPage } from "@/components/HoldingPage";
 import { JsonLd } from "@/components/JsonLd";
 import { SacredHeader } from "@/components/SacredHeader";
 import { site } from "@/lib/site";
@@ -34,20 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={noto.variable}>
-        <div className="blank-overlay">
-          <div className="blank-card">
-            <Image
-              src="/images/neel-agni.jpg"
-              alt=""
-              width={280}
-              height={200}
-              className="blank-lamp"
-              priority
-            />
-            <h1>Darshan is paused.</h1>
-            <p>The lamp will be lit again soon.</p>
-          </div>
-        </div>
+        <HoldingPage />
         <JsonLd />
         <div className="site-outer">
           <SacredHeader />
