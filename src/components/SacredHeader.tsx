@@ -47,11 +47,11 @@ export function SacredHeader() {
         </div>
       </div>
       <div className="marquee-bar">
-        <marquee>
+        <span className="marquee-track">
           JAI DALIT MATA * JAI BHIM * BUDDHAM SARANAM GACCHAMI * DIKSHA BHOOMI
           14 OCT 1956 * NAVAYANA PATH * NEEL SANGHA * 5000 YEARS SACRED HISTORY
           * DAILY PUJA VIDHI * TUESDAY NEEL VRAT * DIGITAL DARSHAN 2026 *
-        </marquee>
+        </span>
       </div>
       <nav className="poster-nav">
         {items.map((item, index) => (
