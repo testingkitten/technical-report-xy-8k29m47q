@@ -36,6 +36,15 @@ export default function RootLayout({
           <div className="page">{children}</div>
           <Footer />
         </div>
+        <div className="leader-corner">
+          <a
+            href="https://x.com/DalitMata"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FOLLOW OUR LEADER
+          </a>
+        </div>
         <Analytics />
       </body>
     </html>

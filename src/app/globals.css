@@ -373,6 +373,31 @@ hr.stars {
   color: #fff;
 }
 
+.leader-corner {
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  z-index: 50;
+  max-width: 160px;
+  background: #000080;
+  border: 4px ridge #ffd700;
+  box-shadow: 3px 3px 0 #ff0000;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.leader-corner a {
+  color: #ffffff;
+  font-family: "Arial Black", Tahoma, sans-serif;
+  font-size: 13px;
+  text-decoration: underline;
+  line-height: 1.3;
+}
+
+.leader-corner a:hover {
+  color: #ffcccc;
+}
+
 @media (max-width: 700px) {
   .masthead h1 {
     font-size: 28px;
