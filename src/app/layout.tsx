@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Noto_Serif_Devanagari } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
@@ -35,6 +36,7 @@ export default function RootLayout({
           <div className="page">{children}</div>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
