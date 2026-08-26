@@ -10,6 +10,225 @@ body {
   font-size: 16px;
 }
 
+html:has(.hold),
+html:has(.hold) body {
+  overflow: hidden;
+}
+
+.hold {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: #fff8e8 url("/images/pixel-paper.jpg");
+  background-size: 180px 180px;
+  image-rendering: pixelated;
+  animation: hold-paper 40s linear infinite;
+}
+
+@keyframes hold-paper {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 180px 90px;
+  }
+}
+
+.hold-frame {
+  width: min(720px, 100%);
+  border: 8px ridge #d4af37;
+  outline: 5px solid #8b0000;
+  box-shadow:
+    0 0 0 10px #00205b,
+    6px 6px 0 #000;
+  background: #000833;
+}
+
+.hold-inner {
+  position: relative;
+  padding: 56px 20px 28px;
+  border: 6px double #d4af37;
+  background:
+    linear-gradient(180deg, rgba(0, 20, 60, 0.35), rgba(0, 8, 30, 0.55)),
+    #001033;
+  overflow: hidden;
+}
+
+.hold-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 3px,
+    rgba(0, 0, 0, 0.12) 3px 4px
+  );
+}
+
+.hold-corner {
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.hold-corner-tl {
+  top: 4px;
+  left: 4px;
+}
+
+.hold-corner-tr {
+  top: 4px;
+  right: 4px;
+  transform: scaleX(-1);
+}
+
+.hold-corner-bl {
+  bottom: 4px;
+  left: 4px;
+  transform: scaleY(-1);
+}
+
+.hold-corner-br {
+  bottom: 4px;
+  right: 4px;
+  transform: scale(-1);
+}
+
+.hold-lotuses {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+.hold-lotuses img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  image-rendering: pixelated;
+  animation: hold-bob 2.8s ease-in-out infinite;
+}
+
+.hold-lotuses img:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.hold-lotuses img:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes hold-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.hold-stage {
+  position: relative;
+  width: min(360px, 70vw);
+  height: min(360px, 70vw);
+  margin: 0 auto;
+}
+
+.hold-lamp,
+.hold-sparks {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hold-lamp {
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: contrast(1.05);
+}
+
+.hold-sparks {
+  pointer-events: none;
+}
+
+.hold-plaque {
+  position: relative;
+  z-index: 1;
+  margin: 8px auto 0;
+  max-width: 28rem;
+  padding: 14px 16px 16px;
+  text-align: center;
+  background: #fff4d6;
+  border: 5px ridge #d4af37;
+  box-shadow: inset 0 0 0 3px #00205b;
+}
+
+.hold-kicker {
+  margin: 0 0 8px;
+  color: #00205b;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.hold-plaque h1 {
+  margin: 0;
+  color: #00205b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.hold-line {
+  margin: 10px 0 0;
+  color: #1a1a2e;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.hold-words {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  height: 42px;
+  border: 3px solid #00205b;
+  background: #fffaf0;
+  color: #00205b;
+  font-size: 22px;
+  letter-spacing: 0.28em;
+  text-align: center;
+  outline: none;
+}
+
+.hold-words:focus {
+  border-color: #0033a0;
+}
+
+.hold-miss {
+  margin: 10px 0 0;
+  color: #8b0000;
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hold,
+  .hold-lotuses img {
+    animation: none;
+  }
+}
+
 a {
   color: #ffffff;
 }

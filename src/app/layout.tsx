@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Noto_Serif_Devanagari } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { SiteGate } from "@/components/SiteGate";
 import { SacredHeader } from "@/components/SacredHeader";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={noto.variable}>
+        <SiteGate />
         <JsonLd />
         <div className="site-outer">
           <SacredHeader />
