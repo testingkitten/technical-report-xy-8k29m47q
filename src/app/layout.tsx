@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Noto_Serif_Devanagari } from "next/font/google";
 import { Footer } from "@/components/Footer";
-import { HoldingPage } from "@/components/HoldingPage";
 import { JsonLd } from "@/components/JsonLd";
 import { SacredHeader } from "@/components/SacredHeader";
 import { site } from "@/lib/site";
@@ -34,8 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={noto.variable}>
-        {/* Remove this line to take the overlay down. */}
-        <HoldingPage />
         <JsonLd />
         <div className="site-outer">
           <SacredHeader />
