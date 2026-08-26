@@ -39,7 +39,7 @@ export function SiteGate() {
     const PX = Math.max(5, Math.round(W / 60));
     const wickX = Math.round((W * 0.635) / PX);
     const wickY = Math.round((H * 0.38) / PX);
-    let grow = match / HOLY.length;
+    const grow = match / HOLY.length;
 
     const sparks = Array.from({ length: 18 }, () => ({
       x: W * 0.58 + Math.random() * W * 0.12,
